@@ -46,11 +46,12 @@
       "prettier --write"
     ]
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 10"
-  ],
+"browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not esmodules"
+],
   "dependencies": {
     "@ant-design/icons": "~4.5.0",
     "@ant-design/plots": "^2.4.0",
