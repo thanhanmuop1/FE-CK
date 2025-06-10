@@ -2,16 +2,22 @@ import React from 'react';
 import { Typography, Steps } from 'antd';
 import styles from '../LandingPage.less';
 
+
+
+
+
 const { Title } = Typography;
 
 const steps = [
   {
     title: 'Tạo tài khoản',
     desc: 'Đăng ký tài khoản thí sinh để bắt đầu xét tuyển.',
+
   },
   {
     title: 'Nộp hồ sơ',
     desc: 'Điền thông tin, tải lên giấy tờ và chọn phương thức xét tuyển.',
+    
   },
   {
     title: 'Nhận kết quả',

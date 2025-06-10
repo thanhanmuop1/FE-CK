@@ -1,32 +1,42 @@
 import React from 'react';
 import styles from '../LandingPage.less';
 import { useHistory } from 'umi';
+import h1 from '../../../assets/h1.png';
+import h2 from '../../../assets/h2.png';
+import h3 from '../../../assets/h3.png';
+import h4 from '../../../assets/h4.png';
+import h5 from '../../../assets/h5.png';
 
 const steps = [
   {
     step: '01',
     title: 'Đăng ký tài khoản',
     description: 'Tạo tài khoản cá nhân trên hệ thống University để bắt đầu quá trình xét tuyển',
+    image: h5,
   },
   {
     step: '02',
     title: 'Cập nhật thông tin cá nhân',
     description: 'Nhập đầy đủ thông tin cá nhân, học tập và tải lên các giấy tờ cần thiết',
+    image: h4,
   },
   {
     step: '03',
     title: 'Chọn trường và ngành',
     description: 'Lựa chọn trường đại học, ngành học và phương thức xét tuyển phù hợp',
+    image: h3,
   },
   {
     step: '04',
     title: 'Nộp hồ sơ xét tuyển',
     description: 'Hoàn thiện và nộp hồ sơ xét tuyển trực tuyến, thanh toán lệ phí xét tuyển',
+    image: h2,
   },
   {
     step: '05',
     title: 'Theo dõi kết quả',
     description: 'Theo dõi trạng thái hồ sơ và nhận thông báo kết quả xét tuyển',
+    image: h1,
   },
 ];
 
@@ -117,7 +127,7 @@ const ProcessSection: React.FC = () => {
                 alignItems: 'center', 
                 justifyContent: 'center' 
               }}>
-                <span style={{ color: '#94221e', fontSize: 24 }}>Hình minh họa</span>
+                <img src={step.image} alt={step.title} style={{ width: '100%', height: '100%', objectFit: "fill"}} />
               </div>
             </div>
           ))}
