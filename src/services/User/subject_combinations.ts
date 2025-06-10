@@ -1,4 +1,5 @@
 import request from '@/utils/axios';
+import { BASE_URL } from '@/utils/utils';
 
 export interface SubjectCombination {
     status: number;
@@ -12,6 +13,6 @@ export interface SubjectCombination {
 }
 
 export const getSubjectCombinations = async (): Promise<SubjectCombination> => {
-    const response = await request.get('http://localhost:3456/users/subject-combinations');
+    const response = await request.get(`${BASE_URL}/users/subject-combinations`);
     return response.data;
 };

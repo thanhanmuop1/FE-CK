@@ -1,4 +1,5 @@
 import request from '@/utils/axios';
+import { BASE_URL } from '@/utils/utils';
 
 // Types cho API responses
 export interface UserProfileResponse {
@@ -68,14 +69,14 @@ export interface UpdateHighSchoolProfileRequest {
 // API functions
 
 export async function getUserProfile(): Promise<UserProfileResponse> {
-  const response = await request(`http://localhost:3456/users/profile`, {
+  const response = await request(`${BASE_URL}/users/profile`, {
     method: 'GET',
   });
   return response.data;
 }
 
 export async function updateUserProfile(data: UpdateUserProfileRequest): Promise<UserProfileResponse> {
-  const response = await request(`http://localhost:3456/users/profile`, {
+  const response = await request(`${BASE_URL}/users/profile`, {
     method: 'PUT',
     data,
   });
@@ -83,14 +84,14 @@ export async function updateUserProfile(data: UpdateUserProfileRequest): Promise
 }
 
 export async function getHighSchoolProfile(): Promise<HighSchoolProfileResponse> {
-  const response = await request(`http://localhost:3456/users/high-school-profile`, {
+  const response = await request(`${BASE_URL}/users/high-school-profile`, {
     method: 'GET',
   });
   return response.data;
 }
 
 export async function updateHighSchoolProfile(data: UpdateHighSchoolProfileRequest): Promise<HighSchoolProfileResponse> {
-  const response = await request(`http://localhost:3456/users/high-school-profile`, {
+  const response = await request(`${BASE_URL}/users/high-school-profile`, {
     method: 'PUT',
     data,
   });

@@ -1,4 +1,6 @@
 import request from '@/utils/axios';
+import { BASE_URL } from '@/utils/utils';
+
 
 interface University {
     success: boolean;
@@ -18,12 +20,12 @@ interface University {
 }
 
 export const getUniversities = async (): Promise<University> => {
-    const response = await request.get('http://localhost:3456/users/universities');
+    const response = await request.get(`${BASE_URL}/users/universities`);
     return response.data;
 };
 
 export const getUniversitiesByAdmissionMethod = async (admissionMethod: string): Promise<University> => {
-    const response = await request.get(`http://localhost:3456/users/universities/university/admission-method?admissionMethod=${admissionMethod}`);
+    const response = await request.get(`${BASE_URL}/users/universities/university/admission-method?admissionMethod=${admissionMethod}`);
     return response.data;
 };
 

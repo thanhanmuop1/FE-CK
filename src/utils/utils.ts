@@ -5,7 +5,7 @@ import type { Moment } from 'moment';
 import moment from 'moment';
 import * as XLSX from 'xlsx';
 
-export const BASE_URL = 'http://localhost:3456';
+export const BASE_URL = 'https://be-ck.onrender.com';
 export const urlRegex =
 	/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.,~#?&//=]*)$/;
 

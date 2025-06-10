@@ -1,5 +1,6 @@
 import axios from '@/utils/axios';
 import { request } from 'umi';
+import { BASE_URL } from '@/utils/utils';
 
 export interface Application {
   _id: string;
@@ -54,33 +55,33 @@ export interface GroupedApplicationsResponse {
 
 // Get all applications
 export async function getAllApplications() {
-  const response = await axios.get<ApplicationsResponse>('http://localhost:3456/admin/applications');
+  const response = await axios.get<ApplicationsResponse>(`${BASE_URL}/admin/applications`);
   return response.data;
 }
 
 // Get applications by university
 export async function getApplicationsByUniversity(universityId: string) {
-  const response = await axios.get<ApplicationsResponse>(`http://localhost:3456/admin/applications/university/${universityId}`);
+  const response = await axios.get<ApplicationsResponse>(`${BASE_URL}/admin/applications/university/${universityId}`);
   return response.data;
 }
 
 // Update application status
 export async function updateApplicationStatus(applicationId: string, data: UpdateStatusRequest) {
-  const response = await axios.patch<ApplicationsResponse>(`http://localhost:3456/admin/applications/${applicationId}/status`, data);
+  const response = await axios.patch<ApplicationsResponse>(`${BASE_URL}/admin/applications/${applicationId}/status`, data);
   return response.data;
-} 
+}
 
 export async function getCompleteApplicationById(applicationId: string) {
-  const response = await request(`http://localhost:3456/users/applications/complete/${applicationId}`, {
+  const response = await request(`${BASE_URL}/users/applications/complete/${applicationId}`, {
     method: 'GET',
   });
-  return response.data
+  return response.data;
 }
 
 // Get applications grouped by major of university
 export async function getApplicationsGroupedByMajorOfUniversity(universityId: string) {
   const response = await axios.get<GroupedApplicationsResponse>(
-    `http://localhost:3456/admin/applications/university/${universityId}/grouped-by-major`
+    `${BASE_URL}/admin/applications/university/${universityId}/grouped-by-major`
   );
   return response.data;
 }

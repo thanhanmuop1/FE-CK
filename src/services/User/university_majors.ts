@@ -1,4 +1,6 @@
 import request from '@/utils/axios';
+import { BASE_URL } from '@/utils/utils';
+
 
 export interface UniversityMajor {
     status: number;
@@ -14,12 +16,12 @@ export interface UniversityMajor {
 }
 
 export const getUniversityMajors = async (universityId: string): Promise<UniversityMajor> => {
-    const response = await request.get(`http://localhost:3456/users/university-majors/${universityId}/majors`);
+    const response = await request.get(`${BASE_URL}/users/university-majors/${universityId}/majors`);
     return response.data;
 };
 
 // export const getUniversityMajorById = async (universityId: string, majorId: string): Promise<UniversityMajor> => {
-//     const response = await request.get(`http://localhost:3456/admin/university_majors/${universityId}/majors/${majorId}`);
+//     const response = await request.get(`${BASE_URL}/admin/university_majors/${universityId}/majors/${majorId}`);
 //     return response.data;
 // };
 

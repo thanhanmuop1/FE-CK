@@ -1,4 +1,5 @@
 import axios from '@/utils/axios';
+import { BASE_URL } from '@/utils/utils';
 
 export interface StatisticsResponse {
   success: boolean;
@@ -32,39 +33,38 @@ export interface StatusStatistics {
   count: number;
 }
 
-const BASE_URL = 'http://localhost:3456/admin/statistics';
 
 export async function getStatisticsByUniversity() {
-  const response = await axios.get(`${BASE_URL}/by-university`);
+  const response = await axios.get(`${BASE_URL}/admin/statistics/by-university`);
   return response.data;
 }
 
 export async function getStatisticsByMajor() {
-  const response = await axios.get(`${BASE_URL}/by-major`);
+  const response = await axios.get(`${BASE_URL}/admin/statistics/by-major`);
   return response.data;
 }
 
 export async function getStatisticsByStatus() {
-  const response = await axios.get(`${BASE_URL}/by-status`);
+  const response = await axios.get(`${BASE_URL}/admin/statistics/by-status`);
   return response.data;
 }
 
 export async function getStatisticsByDate() {
-  const response = await axios.get(`${BASE_URL}/by-date`);
+  const response = await axios.get(`${BASE_URL}/admin/statistics/by-date`);
   return response.data;
 }
 
 export async function getStatisticsByMonth() {
-  const response = await axios.get(`${BASE_URL}/by-month`);
+  const response = await axios.get(`${BASE_URL}/admin/statistics/by-month`);
   return response.data;
 }
 
 export async function getStatisticsByYear() {
-  const response = await axios.get(`${BASE_URL}/by-year`);
+  const response = await axios.get(`${BASE_URL}/admin/statistics/by-year`);
   return response.data;
 }
 
 export async function getStatisticsBetweenUniversities() {
-  const response = await axios.get(`${BASE_URL}/between-universities`);
+  const response = await axios.get(`${BASE_URL}/admin/statistics/between-universities`);
   return response.data;
 }
