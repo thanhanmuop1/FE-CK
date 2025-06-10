@@ -29,7 +29,7 @@ export default defineConfig({
 		loading: '@ant-design/pro-layout/es/PageLoading',
 	},
 	targets: {
-		ie: 11,
+		esmodules: true,
 	},
 	routes,
 	// Theme for antd: https://ant.design/docs/react/customize-theme-cn
