@@ -1,0 +1,201 @@
+// Variables (adjust as per your project's theme)
+@primary-color: #1890ff; // Example Ant Design primary color
+@text-color: rgba(0, 0, 0, 0.85);
+@text-color-secondary: rgba(0, 0, 0, 0.45);
+@border-color-base: #d9d9d9;
+@layout-header-background: #fff;
+@layout-body-background: #f0f2f5;
+@gray-50: #f9fafb;
+@gray-100: #f3f4f6;
+@gray-500: #6b7280;
+@gray-900: #111827;
+
+// General Layout
+.profilePageLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileHeader {
+  background: @layout-header-background;
+  border-bottom: 1px solid @border-color-base;
+  position: sticky;
+  top: 0;
+  z-index: 100; // Ensure header is above sider content on scroll
+  padding: 0 24px; // Default Antd Header padding
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px; // Default Antd Header height
+    max-width: 1200px; // Example container width
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+    .logoPrimary {
+      color: @primary-color;
+    }
+    .logoSecondary {
+      color: @gray-500;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+  // Antd buttons type="text" already have transparent bg
+}
+
+.profileBodyLayout {
+  flex: 1;
+  display: flex; // Ensures Sider and Content are side-by-side
+}
+
+.profileSider {
+  background: @gray-50 !important; // Override Antd default Sider background
+  border-right: 1px solid @border-color-base;
+  height: ~"calc(100vh - 64px)"; // Full height minus header
+  position: sticky !important; // Make sider sticky
+  top: 64px !important; // Position below the header
+  overflow: auto; // For scrollable menu if content exceeds height
+  
+  .siderMenu {
+    background: @gray-50 !important;
+    border-right: none; // Remove default Antd menu border
+    padding-top: 16px;
+
+    .ant-menu-item {
+      margin-bottom: 8px !important; // Add some gap
+      a {
+        color: @gray-500;
+      }
+      &:hover a, &.ant-menu-item-selected a {
+         color: @gray-900;
+      }
+      &.ant-menu-item-selected {
+        background-color: @gray-100 !important;
+        &::after { // Remove the blue right border for selected item
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+
+.profileMainContent {
+  padding: 24px;
+  background: @layout-body-background; // Or #fff if you prefer white content background
+  flex: 1; // Ensure it takes remaining space
+  overflow-y: auto; // If content overflows
+
+  .contentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+}
+
+.profileTabs {
+  .ant-tabs-nav-wrap {
+    // Tab navigation styles if needed
+  }
+  
+  .ant-tabs-content-holder {
+    // Tab content styles if needed
+  }
+}
+
+.profileCard {
+  margin-top: 16px;
+  
+  .ant-card-head-title {
+    font-size: 18px;
+  }
+}
+
+.profileForm {
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .ant-radio-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+// Responsive Save Buttons
+.saveButtonDesktop {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+.saveButtonMobileContainer {
+  margin-top: 24px;
+  display: none;
+  
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+
+.profileFooter {
+  border-top: 1px solid @border-color-base;
+  padding: 24px 0;
+  text-align: center;
+  background: @layout-header-background; // Or specific footer background
+
+  .footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    // display: flex; // If you need flex properties from example
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // gap: 16px;
+  }
+}
+
+.profilePageContainer {
+  // Main container styles
+}
+
+.profileTabs {
+  .ant-tabs-nav-wrap {
+    // Tab navigation styles if needed
+  }
+  
+  .ant-tabs-content-holder {
+    // Tab content styles if needed
+  }
+}
+
+// Mobile save button
+.saveButtonMobileContainer {
+  margin-top: 24px;
+  display: none;
+  
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+} 

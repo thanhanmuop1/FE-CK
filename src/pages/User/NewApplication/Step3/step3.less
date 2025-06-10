@@ -1,0 +1,97 @@
+.step3-page {
+  min-height: 100vh;
+  background-color: #f7f8fa;
+  padding: 32px;
+
+  .main-card {
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 0 auto;
+
+    .card-header {
+      padding: 32px 32px 0;
+      border-bottom: none;
+      margin-bottom: 24px;
+      text-align: center;
+
+      h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #222;
+        margin: 0 0 8px 0;
+      }
+      p {
+        color: #888;
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+
+    form {
+      padding: 0 32px;
+      .ant-form-item-label > label {
+        font-weight: 500;
+        color: #222;
+        font-size: 15px;
+      }
+      .ant-input, .ant-select-selector, .ant-picker {
+        border-radius: 10px !important;
+        min-height: 44px;
+        font-size: 16px;
+      }
+      .ant-select-selector {
+        border: 1.5px solid #d9d9d9 !important;
+        &:hover {
+          border-color: #d32f2f !important;
+        }
+      }
+      .ant-select-focused .ant-select-selector {
+        border-color: #d32f2f !important;
+        box-shadow: 0 0 0 2px rgba(211,47,47,0.10) !important;
+      }
+      .ant-radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        .ant-radio-wrapper {
+          margin-right: 0;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .card-footer {
+      padding: 32px;
+      border-top: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+
+      .ant-btn {
+        min-width: 120px;
+        height: 44px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .ant-btn-primary {
+        background: #d32f2f;
+        border: none;
+        color: #fff;
+        &:hover {
+          background: #b71c1c;
+        }
+      }
+      .ant-btn:not(.ant-btn-primary) {
+        background: #fff;
+        color: #222;
+        border: 1.5px solid #e0e0e0;
+        &:hover {
+          background: #f5f5f5;
+        }
+      }
+    }
+  }
+}

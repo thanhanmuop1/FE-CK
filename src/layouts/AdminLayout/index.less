@@ -1,0 +1,122 @@
+// Variables
+@primary-color: #1890ff;
+@text-color: rgba(0, 0, 0, 0.85);
+@text-color-secondary: rgba(0, 0, 0, 0.45);
+@border-color-base: #d9d9d9;
+@layout-header-background: #fff;
+@layout-body-background: #f0f2f5;
+@gray-50: #f9fafb;
+@gray-100: #f3f4f6;
+@gray-500: #6b7280;
+@gray-900: #111827;
+
+// General Layout
+.adminLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.adminHeader {
+  background: @layout-header-background;
+  border-bottom: 1px solid @border-color-base;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 24px;
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    h2 {
+      margin: 0;
+      color: @primary-color;
+    }
+  }
+
+  .userInfo {
+    color: @gray-500;
+  }
+}
+
+.adminBodyLayout {
+  flex: 1;
+  display: flex;
+}
+
+.adminSider {
+  background: @gray-50 !important;
+  border-right: 1px solid @border-color-base;
+  height: ~"calc(100vh - 64px)";
+  position: sticky !important;
+  top: 64px !important;
+  overflow: auto;
+  
+  .siderMenu {
+    background: @gray-50 !important;
+    border-right: none;
+    padding-top: 16px;
+
+    .ant-menu-item {
+      margin-bottom: 8px !important;
+      
+      a {
+        color: @gray-500;
+        text-decoration: none;
+      }
+      
+      &:hover a, &.ant-menu-item-selected a {
+        color: @gray-900;
+      }
+      
+      &.ant-menu-item-selected {
+        background-color: @gray-100 !important;
+        
+        &::after {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+.adminMainContent {
+  padding: 24px;
+  background: @layout-body-background;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.adminFooter {
+  border-top: 1px solid @border-color-base;
+  padding: 24px 0;
+  text-align: center;
+  background: @layout-header-background;
+
+  .footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: @gray-500;
+  }
+}
+
+// Responsive breakpoints
+@media (max-width: 991px) {
+  .adminSider {
+    position: fixed !important;
+    left: -250px;
+    transition: left 0.3s;
+    z-index: 99;
+    
+    &.ant-layout-sider-collapsed {
+      left: -250px;
+    }
+  }
+} 

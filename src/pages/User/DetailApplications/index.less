@@ -1,0 +1,72 @@
+.detail-applications-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 0;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  .main-card {
+    margin-bottom: 24px;
+  }
+
+  .section {
+    margin-bottom: 24px;
+  }
+
+  .info-card {
+    .ant-descriptions {
+      margin-bottom: 16px;
+    }
+    .priority-info {
+      margin-top: 16px;
+      .total-score {
+        margin-top: 8px;
+        font-weight: bold;
+        .score-value {
+          color: #1890ff;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .document-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid #f0f0f0;
+      border-radius: 6px;
+      padding: 12px 16px;
+      background: #fafafa;
+      .doc-icon {
+        font-size: 28px;
+        color: #bfbfbf;
+      }
+      .doc-info {
+        flex: 1;
+        .doc-name {
+          font-weight: 500;
+        }
+        .doc-meta {
+          color: #888;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

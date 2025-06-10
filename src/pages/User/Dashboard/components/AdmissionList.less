@@ -1,0 +1,38 @@
+.admission-list-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 24px 32px;
+  margin-top: 24px;
+}
+.admission-list-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #222;
+}
+.admission-tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 16px;
+  .tab {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    &.active {
+      color: #d32f2f;
+      border-bottom: 2px solid #d32f2f;
+    }
+  }
+}
+.admission-empty {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+  margin: 48px 0;
+}

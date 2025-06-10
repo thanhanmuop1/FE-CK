@@ -1,0 +1,144 @@
+.container {
+  :global {
+    .ant-table-wrapper {
+      margin-top: 16px;
+    }
+
+    .ant-descriptions {
+      margin-top: 16px;
+    }
+
+    .ant-tag {
+      margin-right: 0;
+    }
+
+    .ant-space {
+      gap: 8px !important;
+    }
+  }
+}
+
+:global {
+  .ant-modal-body {
+    padding: 24px;
+  }
+
+  .ant-descriptions-item-label {
+    font-weight: 500;
+  }
+}
+
+// Detail View Styles
+.detailContainer {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 100vh;
+
+  .header {
+    margin-bottom: 24px;
+
+    .backButton {
+      margin-bottom: 16px;
+      padding: 0;
+    }
+
+    .headerContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+        color: #1f1f1f;
+      }
+
+      .subtitle {
+        color: #666;
+        margin: 8px 0 0;
+      }
+    }
+  }
+
+  .infoCard {
+    margin-bottom: 24px;
+  }
+
+  .tabs {
+    :global {
+      .ant-tabs-nav {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .documentsList {
+    .documentItem {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border: 1px solid #f0f0f0;
+      border-radius: 8px;
+      margin-bottom: 16px;
+
+      .documentIcon {
+        font-size: 24px;
+        color: #1890ff;
+        margin-right: 16px;
+      }
+
+      .documentInfo {
+        flex: 1;
+
+        h4 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        p {
+          margin: 4px 0 0;
+          color: #666;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .historyList {
+    .historyItem {
+      padding: 16px;
+      border-left: 2px solid #1890ff;
+      margin-bottom: 16px;
+      background: #fafafa;
+      border-radius: 0 8px 8px 0;
+
+      .historyDate {
+        color: #666;
+        font-size: 14px;
+        margin: 8px 0;
+      }
+
+      .historyContent {
+        margin: 0;
+        color: #1f1f1f;
+      }
+    }
+  }
+}
+
+.groupedApplications {
+  .panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .majorName {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+} 

@@ -1,0 +1,226 @@
+.container {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 100%;
+}
+
+.title {
+  margin-bottom: 32px;
+  color: #1a1a1a;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  padding-bottom: 16px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #1890ff, #52c41a);
+    border-radius: 2px;
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.pageHeader {
+  margin-bottom: 24px;
+
+  .ant-typography {
+    margin-bottom: 8px !important;
+  }
+
+  .pageDescription {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.overviewSection {
+  margin-bottom: 24px;
+}
+
+.chartsSection {
+  margin-bottom: 24px;
+
+  .chartCard {
+    height: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+
+    .ant-card-head {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 24px;
+    }
+
+    .ant-card-body {
+      padding: 24px;
+    }
+  }
+
+  .timelineRow {
+    margin-top: 24px;
+  }
+}
+
+.comparisonSection {
+  .comparisonCard {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+
+    .ant-card-head {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 16px 24px;
+    }
+
+    .ant-card-body {
+      padding: 24px;
+    }
+  }
+}
+
+.card {
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: none;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .ant-card-head {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 16px 24px;
+    
+    .ant-card-head-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+  }
+
+  .ant-card-body {
+    padding: 24px;
+  }
+}
+
+.statisticCard {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .ant-statistic-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .ant-statistic-content {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.chartContainer {
+  height: 400px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.tableContainer {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  .ant-table {
+    background: transparent;
+  }
+
+  .ant-table-thead > tr > th {
+    background: #fafafa;
+    font-weight: 600;
+  }
+
+  .ant-table-tbody > tr:hover > td {
+    background: #f5f5f5;
+  }
+}
+
+// Animation classes
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .pageHeader {
+    margin-bottom: 16px;
+  }
+
+  .overviewSection,
+  .chartsSection {
+    margin-bottom: 16px;
+  }
+
+  .chartCard {
+    .ant-card-head {
+      padding: 12px 16px;
+    }
+
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+} 

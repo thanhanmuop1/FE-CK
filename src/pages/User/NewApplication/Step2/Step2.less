@@ -1,0 +1,178 @@
+.step2-page {
+    min-height: 100vh;
+    background-color: #f7f8fa;
+    padding: 32px;
+  
+    .page-header {
+      margin-bottom: 24px;
+  
+      .back-button {
+        color: #666;
+        font-size: 14px;
+        
+        &:hover {
+          color: #1890ff;
+        }
+      }
+    }
+  
+    .page-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    .step-indicator {
+      margin-bottom: 32px;
+  
+      .step-progress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  
+    .main-card {
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin: 0 auto;
+  
+      .card-header {
+        padding: 32px 32px 0;
+        border-bottom: none;
+        margin-bottom: 24px;
+  
+        h2 {
+          font-size: 28px;
+          font-weight: 700;
+          color: #222;
+          margin: 0 0 8px 0;
+          text-align: center;
+        }
+  
+        p {
+          color: #888;
+          margin: 0;
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+  
+      .card-content {
+        padding: 0 32px;
+  
+        .method-alert {
+          margin-bottom: 24px;
+          border-radius: 10px;
+          font-size: 16px;
+          .ant-alert-message {
+            font-weight: 600;
+            color: #d32f2f;
+          }
+          .ant-alert-description {
+            color: #d32f2f;
+          }
+          background: #fff0f0;
+          border: 1.5px solid #ffd6d6;
+        }
+  
+        .selection-form {
+          .ant-form-item {
+            margin-bottom: 24px;
+            .ant-form-item-label label {
+              font-weight: 500;
+              color: #222;
+              font-size: 15px;
+            }
+            .ant-select {
+              .ant-select-selector {
+                border-radius: 10px;
+                min-height: 48px;
+                font-size: 16px;
+                border: 1.5px solid #d9d9d9;
+                &:hover {
+                  border-color: #d32f2f;
+                }
+              }
+              &.ant-select-focused .ant-select-selector {
+                border-color: #d32f2f;
+                box-shadow: 0 0 0 2px rgba(211,47,47,0.10);
+              }
+            }
+          }
+        }
+  
+        .combination-note {
+          margin-top: 16px;
+          border-radius: 6px;
+        }
+      }
+  
+      .card-footer {
+        padding: 32px;
+        border-top: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+  
+        .ant-btn {
+          min-width: 120px;
+          height: 44px;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 16px;
+        }
+        .ant-btn-primary {
+          background: #d32f2f;
+          border: none;
+          color: #fff;
+          &:hover {
+            background: #b71c1c;
+          }
+        }
+        .ant-btn:not(.ant-btn-primary) {
+          background: #fff;
+          color: #222;
+          border: 1.5px solid #e0e0e0;
+          &:hover {
+            background: #f5f5f5;
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive design
+  @media (max-width: 768px) {
+    .step2-page {
+      padding: 16px;
+  
+      .step-indicator .step-progress {
+      }
+  
+      .main-card {
+        .card-header,
+        .card-content,
+        .card-footer {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+  
+        .card-content {
+          .selection-form {
+            .ant-form-item {
+              margin-bottom: 20px;
+            }
+          }
+        }
+  
+        .card-footer {
+          .ant-btn {
+            min-width: 80px;
+            height: 36px;
+          }
+        }
+      }
+    }
+  }

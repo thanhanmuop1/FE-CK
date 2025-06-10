@@ -1,0 +1,145 @@
+.applicationCard {
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 24px;
+  background: #ffffff;
+  overflow: hidden;
+  
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    border-color: #1890ff;
+  }
+
+  .ant-card-body {
+    padding: 24px;
+  }
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+
+    .cardTitle {
+      flex: 1;
+      
+      h4 {
+        margin: 0 0 8px 0;
+        color: #1f1f1f;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .ant-typography {
+        color: #595959;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    .cardStatus {
+      .ant-badge {
+        .ant-badge-status-dot {
+          width: 10px;
+          height: 10px;
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+        }
+        
+        .ant-badge-status-text {
+          font-weight: 600;
+          margin-left: 8px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+  }
+
+  .cardContent {
+    .infoItem {
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      background: #fafafa;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background: #f5f5f5;
+      }
+      
+      .ant-typography:first-child {
+        display: block;
+        font-size: 12px;
+        color: #8c8c8c;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
+
+      .ant-typography:last-child {
+        display: block;
+        font-size: 15px;
+        color: #262626;
+        font-weight: 500;
+      }
+    }
+
+    .cardActions {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: flex-end;
+
+      .ant-btn {
+        border-radius: 8px;
+        font-weight: 600;
+        padding: 8px 20px;
+        height: auto;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+        }
+
+        .anticon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+// Status badge colors with modern styling
+.ant-badge-status-success {
+  .ant-badge-status-dot {
+    background-color: #52c41a;
+    box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.1);
+  }
+}
+
+.ant-badge-status-warning {
+  .ant-badge-status-dot {
+    background-color: #faad14;
+    box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.1);
+  }
+}
+
+.ant-badge-status-error {
+  .ant-badge-status-dot {
+    background-color: #ff4d4f;
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.1);
+  }
+} 
